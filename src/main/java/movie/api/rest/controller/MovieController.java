@@ -11,7 +11,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-//@CrossOrigin(origins = "http://localhost:8081")
+import javax.validation.Valid;
+
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/movie")
 public class MovieController {
@@ -48,7 +50,7 @@ public class MovieController {
     }
 
     @PutMapping("/title/")
-    public ResponseEntity<Movie> updateMovie(@RequestParam String title, @RequestBody Movie movie) {
+    public ResponseEntity<Movie> updateMovie(@RequestParam String title, @RequestBody @Valid Movie movie) {
         Optional<Movie> movieData = movieService.findByTitle(title);
         if (movieData.isPresent()) {
             Movie _movie = movieData.get();
@@ -64,7 +66,7 @@ public class MovieController {
 
 
     @RequestMapping(method = RequestMethod.POST, produces = "application/json")
-    public ResponseEntity<Movie> saveMovie(@RequestBody Movie movie, BindingResult bindingResult) {
+    public ResponseEntity<Movie> saveMovie(@RequestBody @Valid Movie movie, BindingResult bindingResult) {
 
         Movie saveMovie = movieService.saveMovie(movie);
 
@@ -75,7 +77,7 @@ public class MovieController {
     }
 
     @DeleteMapping(path = "/{id}")
-    public ResponseEntity<HttpStatus> deleteMovie(@PathVariable("id") long id) {
+    public ResponseEntity<HttpStatus> deleteMovie(@PathVariable("id") @Valid long id) {
         try {
             movieService.deleteMovie(id);
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);

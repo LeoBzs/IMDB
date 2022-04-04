@@ -1,5 +1,5 @@
 
-INSERT INTO MOVIE(title, category, description, year, rating) VALUES ('unforgiven', 'western', 'another one of Clint Eastwoods classic western movies, starring the man himself as well as morgan freeman', 1998, 10);
-INSERT INTO MOVIE(title, category, description, year, rating) VALUES ('simuladores', 'comedy', 'group of scammers for hire', 2005, 7);
-INSERT INTO MOVIE(title, category, description, year, rating) VALUES ('mib', 'action', 'a classic will smith blockbuster', 2005, 4);
-INSERT INTO MOVIE(title, category, description, year, rating) VALUES ('logan', 'drama', 'marvel is apparently capable of decent writing sometimes', 2017, 8);
+INSERT INTO MOVIE(category, description, rating, title, `year`) VALUES ('western', 'another one of Clint Eastwoods classic western movies, starring the man himself as well as morgan freeman', 10, 'unforgiven', 1998);
+INSERT INTO MOVIE(category, description, rating, title, `year`) VALUES ('comedy', 'group of scammers for hire', 8,'simuladores', 2005);
+INSERT INTO MOVIE(category, description, rating, title, `year`) VALUES ('action', 'a classic will smith blockbuster', 8,'mib', 2004);
+INSERT INTO MOVIE(category, description, rating, title, `year`) VALUES ('drama', 'marvel is apparently capable of decent writing sometimes', 9,'logan' , 2017);

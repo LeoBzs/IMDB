@@ -9,7 +9,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication
 @EnableSpringDataWebSupport
 @EnableCaching
-//@EnableSwagger2
+@EnableSwagger2
 public class IMDBApplication {
 
     public static void main(String[] args) {
@@ -17,4 +17,4 @@ public class IMDBApplication {
     }
 
 }
-
+// herokuapp: https://imdb-bonaparte.herokuapp.com/

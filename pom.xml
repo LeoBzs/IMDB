@@ -8,8 +8,8 @@
         <version>2.1.4.RELEASE</version>
         <relativePath /> <!-- lookup parent from movie.api.rest.model.repository -->
     </parent>
-    <groupId>restaurant.voting.system</groupId>
-    <artifactId>voting-system</artifactId>
+    <groupId>movie.api.rest</groupId>
+    <artifactId>movie.api.rest</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>rest-system</name>
     <description>Project using Spring Boot</description>
